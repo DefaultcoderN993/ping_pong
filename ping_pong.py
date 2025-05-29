@@ -32,7 +32,7 @@ class Player2(GameSprite):
             self.rect.y += self.speed
 
 player1 = Player(7, 'рокетка.png', 650, 250, 50, 100)
-player2 = Player2(7, 'рокетка.png', 50, 250, 50, 100)
+player2 = Player2(7, 'рокетка.png', 5, 250, 50, 100)
 
 game = True
 while game:
