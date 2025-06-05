@@ -4,6 +4,8 @@ window = pg.display.set_mode((700, 500))
 clock = pg.time.Clock()
 pg.display.set_caption('Ping Pong')
 
+
+
 BLACK = (0, 0, 0)
 
 class GameSprite(pg.sprite.Sprite):
@@ -39,18 +41,18 @@ class Player2(GameSprite):
         if keys_pressed[pg.K_DOWN] and self.rect.y < 395:
             self.rect.y += self.speed
 
-player1 = Player(7, 'рокетка.png', 650, 250, 50, 100)
-player2 = Player2(7, 'рокетка.png', 5, 250, 50, 100)
+player1 = Player(7, 'рокетка.png', 620, 250, 75, 100)
+player2 = Player2(7, 'рокетка.png', 0, 250, 75, 100)
 
 game = True
 while game:
+    player1.fill()
+    player2.fill()
     player1.draw()
     player2.draw()
     for e in pg.event.get():
         if e.type == pg.QUIT:
             game = False
-    player1.fill()
-    player2.fill()
     player1.update()
     player2.update()
     clock.tick(40)
