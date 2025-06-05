@@ -71,7 +71,7 @@ class Game():
 
 player1 = Player(7, 'рокетка.png', 620, 250, 75, 100)
 player2 = Player2(7, 'рокетка.png', 0, 250, 75, 100)
-ball = Ball(3, 'мяч.png', 350, 250, 75, 50)
+ball = Ball(3, 'мяч.png', 350, 250, 50, 50)
 
 game = Game()
 while game.run:
