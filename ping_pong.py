@@ -4,7 +4,10 @@ window = pg.display.set_mode((700, 500))
 clock = pg.time.Clock()
 pg.display.set_caption('Ping Pong')
 
-
+background = pg.transform.scale(
+    pg.image.load("forest.jpg"),
+    (700, 500)
+)
 
 BLACK = (0, 0, 0)
 
@@ -46,6 +49,7 @@ player2 = Player2(7, 'рокетка.png', 0, 250, 75, 100)
 
 game = True
 while game:
+    window.blit(background, (0, 0))
     player1.fill()
     player2.fill()
     player1.draw()
