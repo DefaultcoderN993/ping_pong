@@ -58,8 +58,12 @@ class Ball(GameSprite):
             self.speed_y *= -1
         if self.rect.x > WIDTH - self.rect.width:
             player2_score += 1
-        if self.rect.x < self.rect.x < 0:
+            self.rect.x = 350
+            self.rect.y = 250
+        if self.rect.x < 0:
             player1_score += 1
+            self.rect.x = 350
+            self.rect.y = 250
         if pg.sprite.collide_rect(player1, ball) or pg.sprite.collide_rect(player2, ball):
             self.speed_x *= -1
 
